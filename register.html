@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#6dd5ed;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:20px;
+width:400px;
+border-radius:10px;
+}
+
+input,textarea,select{
+width:100%;
+padding:10px;
+margin:8px 0;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#2193b0;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+button:disabled{
+background:gray;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Event Registration</h2>
+
+<input type="text" id="firstName" placeholder="First Name" oninput="enableLastName()">
+
+<input type="text" id="lastName" placeholder="Last Name" disabled oninput="enableUsername()">
+
+<input type="text" id="username" placeholder="Username" disabled oninput="enablePassword()">
+
+<input type="password" id="password" placeholder="Password" disabled oninput="enableConfirmPassword()">
+
+<input type="password" id="confirmPassword" placeholder="Confirm Password" disabled oninput="enableDOB()">
+
+<input type="date" id="dob" disabled oninput="enableMobile()">
+
+<input type="text" id="mobile" placeholder="Mobile Number" disabled oninput="enableAddress()">
+
+<textarea id="address" placeholder="Address" disabled oninput="enablePin()"></textarea>
+
+<input type="text" id="pin" placeholder="PIN Code" disabled oninput="enableGender()">
+
+<select id="gender" disabled onchange="enableRegister()">
+
+<option value="">Select Gender</option>
+
+<option>Male</option>
+
+<option>Female</option>
+
+<option>Other</option>
+
+</select>
+
+<button id="registerBtn" onclick="register()" disabled>Register</button>
+
+</div>
+
+<script src="details.js"></script>
+
+</body>
+</html>
